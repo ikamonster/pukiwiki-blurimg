@@ -11,7 +11,9 @@ img標準プラグインと使い方は同じですが、画像がぼかされ�
 
 ## インストール
 
-blurimg.inc.php を PukiWiki の plugin ディレクトリに配置してください。
+下記GitHubページからダウンロードした blurimg.inc.php を PukiWiki の plugin ディレクトリに配置してください。
+
+[https://github.com/ikamonster/pukiwiki-blurimg](https://github.com/ikamonster/pukiwiki-blurimg)
 
 ## 使い方
 
