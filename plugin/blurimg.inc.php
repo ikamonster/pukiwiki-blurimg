@@ -1,7 +1,7 @@
 <?php
 /*
 PukiWiki - Yet another WikiWikiWeb clone.
-blurimg.inc.php, v1.00 2020 M.Taniguchi
+blurimg.inc.php, v1.0.1 2020 M.Taniguchi
 License: GPL v3 or (at your option) any later version
 
 ぼかし画像を表示するPukiWiki用プラグイン。
@@ -48,10 +48,10 @@ function plugin_blurimg_makeTag($args, $inline) {
 a[data-blurimg]:hover{background-color:transparent}
 a[data-blurimg]{display:inline-block;position:relative;width:auto;height:auto;z-index:0;overflow:hidden}
 a[data-blurimg]::before{display:block;position:absolute;left:0;top:0;content:'';width:100%;height:100%;z-index:1;margin:0;padding:0;background-color:gray;opacity:1;-webkit-transition:opacity 100ms;transition:opacity 100ms;}
-a[data-blurimg]:hover::before{opacity:0;-webkit-transition:opacity ${duration}ms 50ms;transition:opacity ${duration}ms 50ms}
-@supports ((-webkit-filter:blur(${radius}px)) or (filter:blur(${radius}px))) {
-a[data-blurimg] img{-webkit-filter:blur(${radius}px);filter:blur(${radius}px);-webkit-transition:100ms;transition:100ms}
-a[data-blurimg]:hover img{-webkit-filter:none;filter:none;-webkit-transition:${duration}ms 50ms;transition:${duration}ms 50ms}
+a[data-blurimg]:hover::before{opacity:0;-webkit-transition:opacity {$duration}ms 50ms;transition:opacity {$duration}ms 50ms}
+@supports ((-webkit-filter:blur({$radius}px)) or (filter:blur({$radius}px))) {
+a[data-blurimg] img{-webkit-filter:blur({$radius}px);filter:blur({$radius}px);-webkit-transition:100ms;transition:100ms}
+a[data-blurimg]:hover img{-webkit-filter:none;filter:none;-webkit-transition:{$duration}ms 50ms;transition:{$duration}ms 50ms}
 a[data-blurimg]::before{display:none}
 }
 </style>
